@@ -1,17 +1,25 @@
 *{
     box-sizing: border-box;
+    font-family: arial;
+}
+
+.heading{
+    margin: auto;
+    text-align: center;
+    margin: 20px;
 }
 
 .ticTacToe {
-    width: 500px;
-    height: 500px;
+    display: grid;
+    margin: auto;
+    width: 450px;
+    border: solid 1px red;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3,150px);
 }
 
 
 .grid{
     border: solid 1px black;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-
 }
 
