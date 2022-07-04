@@ -3,6 +3,10 @@
     font-family: arial;
 }
 
+body{
+    background-color:rgb(245, 242, 237);
+}
+
 .heading{
     margin: auto;
     text-align: center;
@@ -21,5 +25,6 @@
 
 .grid{
     border: solid 1px black;
+    background-color: aliceblue;
 }
 
