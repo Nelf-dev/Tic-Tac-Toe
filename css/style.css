@@ -1,0 +1,17 @@
+*{
+    box-sizing: border-box;
+}
+
+.ticTacToe {
+    width: 500px;
+    height: 500px;
+}
+
+
+.grid{
+    border: solid 1px black;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+}
+
