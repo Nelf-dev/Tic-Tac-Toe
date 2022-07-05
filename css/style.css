@@ -13,6 +13,12 @@ body{
     margin: 20px;
 }
 
+h3{
+    margin: auto;
+    text-align: center;
+    margin: 20px;
+}
+
 .ticTacToe {
     display: grid;
     margin: auto;
@@ -22,9 +28,14 @@ body{
     grid-template-rows: repeat(3,150px);
 }
 
-
 .grid{
     border: solid 1px black;
     background-color: aliceblue;
 }
+
+.grid:hover {
+    border: solid 2px red;
+}
+
+
 
