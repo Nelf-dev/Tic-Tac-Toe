@@ -38,4 +38,44 @@ h3{
 }
 
 
+/* Winning Screen */
+
+.end {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin-top: -20px;
+    margin-left: -8px;
+    background: black;
+    
+}
+
+.ending {
+    text-align: center;
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    top: 40%;
+}
+
+.endMsg {
+    color: white;
+}
+
+button{
+    display: relative;
+    margin: 0 auto;
+    padding: 13px;
+    font-size: 1em;
+    border: none;
+    border-radius: 10%;
+    background-color:rgb(132, 132, 132);
+    color: white;
+
+}
+
+
+
+
 
