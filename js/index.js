@@ -2,6 +2,9 @@
 $(document).ready(function() {
     $('.end').hide(); // Hides Away end game screen
     const players = ["X","O"];
+    const popAudio = new Audio("sounds/pop.wav"); //Sound Effects
+    const endAudio = new Audio("sounds/end.wav");
+    const winAudio = new Audio("sounds/win.wav");
 
     let scoresX = 0;
     let scoresO = 1;
@@ -32,6 +35,7 @@ $(document).ready(function() {
         for(let i = 0 ; i < player.length; i++){ // Cycles through both X and O into these conditionals
             for(let j = 0; j < winCombo.length; j++){
                     if($(`${winCombo[j][0]}`).children().attr('class') === player[i]&& $(`${winCombo[j][1]}`).children().attr('class') === player[i] && $(`${winCombo[j][2]}`).children().attr('class') === player[i]){
+                        winAudio.play()
                         $('.endMsg').text(`${player[i]} wins!`);
                         $('.end').fadeIn(600);
                         return(player[i]);
@@ -47,6 +51,7 @@ $(document).ready(function() {
     
         //ALTERNATES FROM BOTH PICTURES WITH MODULO- EVEN OR ODD
         $('.grid').on('click', function(){
+            popAudio.play();
             let numOfImg = $(this).children().length; //length of each individual grid
             let numOfImgInGrid = $('.grid').children().length + 1; //length of how many img in all grids
             console.log(numOfImgInGrid);
@@ -65,7 +70,10 @@ $(document).ready(function() {
             console.log(isWin(players)); //Checks after every click if win combination met
         });
 
+
         //Button Functions
+        
+
         $('.restart').on('click', function(){ // SCORING
             if(isWin(players) === 'X'){
                 scoresX += 1;
@@ -82,12 +90,14 @@ $(document).ready(function() {
         });
     
         $('.restart').on('click', function(){ // Restart button
+            endAudio.play();
             $('img').remove();
             $('.turn').text('Please Start X');
             $('.end').fadeOut(600);
         });
 
         $('.reset').on('click', function(){ // Reset function
+            endAudio.play();
             $('img').remove();
             $('.turn').text('Please Start X');
             localStorage.clear(); // Clears all local storage
