@@ -28,10 +28,19 @@ body{
     grid-template-rows: repeat(3,150px);
 }
 
+img{
+    width: 130px;
+    height: 130px;
+    margin: 0 auto;
+    margin-top: 0.5em;
+    display: block;
+
+}
+
 .grid{
     border: solid 1px black;
     background-color: aliceblue;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
 .grid:hover {
@@ -71,7 +80,7 @@ body{
     height: 100%;
     margin-top: -20px;
     margin-left: -8px;
-    background: black;
+    background: rgb(245, 242, 237);
     
 }
 
@@ -84,7 +93,7 @@ body{
 }
 
 .endMsg {
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .restart{

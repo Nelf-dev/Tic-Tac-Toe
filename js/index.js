@@ -21,42 +21,42 @@ $(document).ready(function() {
         for(let i = 0 ; i < player.length; i++){
             if($('#g0').children().attr('class') === player[i]&& $('#g1').children().attr('class') === player[i] && $('#g2').children().attr('class') === player[i]){
                 $('.endMsg').text(`${player[i]} wins!`);
-                $('.end').fadeIn(1000);
+                $('.end').fadeIn(600);
                 return(player[i]);
             }
             if($('#g3').children().attr('class') === player[i]&& $('#g4').children().attr('class') === player[i] && $('#g5').children().attr('class') === player[i]){
                 $('.endMsg').text(`${player[i]} wins!`)
-                $('.end').fadeIn(1000);
+                $('.end').fadeIn(600);
                 return(player[i]);
             }
             if($('#g6').children().attr('class') === player[i]&& $('#g7').children().attr('class') === player[i] && $('#g8').children().attr('class') === player[i]){
                 $('.endMsg').text(`${player[i]} wins!`)
-                $('.end').fadeIn(1000);
+                $('.end').fadeIn(600);
                 return(player[i]);
             }
             if($('#g0').children().attr('class') === player[i]&& $('#g3').children().attr('class') === player[i] && $('#g6').children().attr('class') === player[i]){
                 $('.endMsg').text(`${player[i]} wins!`)
-                $('.end').fadeIn(1000);
+                $('.end').fadeIn(600);
                 return(player[i]);
             }
             if($('#g1').children().attr('class') === player[i]&& $('#g4').children().attr('class') === player[i] && $('#g7').children().attr('class') === player[i]){
                 $('.endMsg').text(`${player[i]} wins!`)
-                $('.end').fadeIn(1000);
+                $('.end').fadeIn(600);
                 return(player[i]);
             }
             if($('#g2').children().attr('class') === player[i]&& $('#g5').children().attr('class') === player[i] && $('#g8').children().attr('class') === player[i]){
                 $('.endMsg').text(`${player[i]} wins!`)
-                $('.end').fadeIn(1000);
+                $('.end').fadeIn(600);
                 return(player[i]);
             }
             if($('#g0').children().attr('class') === player[i]&& $('#g4').children().attr('class') === player[i] && $('#g8').children().attr('class') === player[i]){
                 $('.endMsg').text(`${player[i]} wins!`)
-                $('.end').fadeIn(1000);
+                $('.end').fadeIn(600);
                 return(player[i]);
             }
             if($('#g2').children().attr('class') === player[i]&& $('#g4').children().attr('class') === player[i] && $('#g6').children().attr('class') === player[i]){
                 $('.endMsg').text(`${player[i]} wins!`);
-                $('.end').fadeIn(1000);
+                $('.end').fadeIn(600);
                 return(player[i]);
             }
             if($('#g0').children().length !== 0 && $('#g1').children().length !== 0 && $('#g2').children().length !== 0 && $('#g3').children().length !== 0 && $('#g4').children().length !== 0 && $('#g5').children().length !== 0 && $('#g6').children().length !== 0 && $('#g7').children().length !== 0 && $('#g8').children().length !== 0) {
@@ -80,10 +80,10 @@ $(document).ready(function() {
                 return 0;
             }
             if(numOfImgInGrid % 2 === 1){ //If odd 
-                $('<img class="X" src="img/cross.png"/>').hide().prependTo(this).fadeIn('slow');
+                $('<img class="X" src="img/cross.png"/>').hide().prependTo(this).fadeIn(200);
                 $('.turn').text('Player 2 turn');
             } if (numOfImgInGrid % 2 === 0){ //If Even
-                $('<img class="O" src="img/circle.png"/>').hide().prependTo(this).fadeIn('slow');
+                $('<img class="O" src="img/circle.png"/>').hide().prependTo(this).fadeIn(200);
                 $('.turn').text('Player 1 turn');
             }
             console.log(isWin(players));
