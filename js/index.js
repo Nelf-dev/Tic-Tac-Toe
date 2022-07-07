@@ -40,15 +40,16 @@ $(document).ready(function() {
                         $('.end').fadeIn(600);
                         return(player[i]);
                     }
-                    if($('#g0').children().length !== 0 && $('#g1').children().length !== 0 && $('#g2').children().length !== 0 && $('#g3').children().length !== 0 && $('#g4').children().length !== 0 && $('#g5').children().length !== 0 && $('#g6').children().length !== 0 && $('#g7').children().length !== 0 && $('#g8').children().length !== 0 & isWin !== 'X' && isWin != 'O') {
+            }
+        }
+    }
+    const isDraw = function () {
+                    if($('#g0').children().length !== 0 && $('#g1').children().length !== 0 && $('#g2').children().length !== 0 && $('#g3').children().length !== 0 && $('#g4').children().length !== 0 && $('#g5').children().length !== 0 && $('#g6').children().length !== 0 && $('#g7').children().length !== 0 && $('#g8').children().length !== 0){
                         $('.endMsg').text(`DRAW`)
                         $('.end').fadeIn(600);
                         return ('DRAW');
                     }
                 }
-            }
-        }
-    
         //ALTERNATES FROM BOTH PICTURES WITH MODULO- EVEN OR ODD
         $('.grid').on('click', function(){
             popAudio.play();
@@ -67,7 +68,10 @@ $(document).ready(function() {
                 $('<img class="O" src="img/circle.png"/>').hide().prependTo(this).fadeIn(200); //Adds picture of O
                 $('.turn').text('Player X turn');
             }
-            console.log(isWin(players)); //Checks after every click if win combination met
+            if(isWin(players)){
+                return 0;
+            }
+            isDraw() //Checks after every click if win combination not met
         });
 
 
