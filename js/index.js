@@ -4,7 +4,7 @@ $(document).ready(function() {
     const players = ["X","O"];
 
     let scoresX = 0;
-    let scoresO = 0;
+    let scoresO = 1;
 
     if(localStorage.getItem('KeyX')){ // Checks local storage for previous logged scores
         scoresX = parseInt(localStorage.getItem('KeyX'));
@@ -51,15 +51,16 @@ $(document).ready(function() {
             let numOfImgInGrid = $('.grid').children().length + 1; //length of how many img in all grids
             console.log(numOfImgInGrid);
             if( numOfImg >= 1){ // If attempt to add more than one img in grid, alert user and no action
+                $(this).effect('shake'); //Notifies user that you are not allowed to add it in again
                 console.log("One picture per slot!");
                 return 0;
             }
             if(numOfImgInGrid % 2 === 1){ //If odd 
                 $('<img class="X" src="img/cross.png"/>').hide().prependTo(this).fadeIn(200); //Adds picture of X
-                $('.turn').text('Player 2 turn');
+                $('.turn').text('Player O turn');
             } if (numOfImgInGrid % 2 === 0){ //If Even
                 $('<img class="O" src="img/circle.png"/>').hide().prependTo(this).fadeIn(200); //Adds picture of O
-                $('.turn').text('Player 1 turn');
+                $('.turn').text('Player X turn');
             }
             console.log(isWin(players)); //Checks after every click if win combination met
         });
@@ -82,13 +83,13 @@ $(document).ready(function() {
     
         $('.restart').on('click', function(){ // Restart button
             $('img').remove();
-            $('.turn').text('Please Start player 1');
+            $('.turn').text('Please Start X');
             $('.end').fadeOut(600);
         });
 
         $('.reset').on('click', function(){ // Reset function
             $('img').remove();
-            $('.turn').text('Please Start player 1');
+            $('.turn').text('Please Start X');
             localStorage.clear(); // Clears all local storage
             scoresX = 0;
             scoresO = 0;
