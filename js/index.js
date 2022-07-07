@@ -78,10 +78,10 @@ const isWin = function (player){
             return 0;
         }
         if(numOfImgInGrid % 2 === 1){ //If odd 
-            $(this).prepend('<img class="X" src="img/cross.png"/>');
+            $('<img class="X" src="img/cross.png"/>').hide().prependTo(this).fadeIn('slow');
             $('.turn').text('Player 2 turn');
         } if (numOfImgInGrid % 2 === 0){ //If Even
-            $(this).prepend('<img class="O" src="img/circle.png"/>');
+            $('<img class="O" src="img/circle.png"/>').hide().prependTo(this).fadeIn('slow');
             $('.turn').text('Player 1 turn');
         }
         console.log(isWin(players));

@@ -31,10 +31,12 @@ body{
 .grid{
     border: solid 1px black;
     background-color: aliceblue;
+    transition: 0.5s;
 }
 
 .grid:hover {
-    border: solid 2px rgb(106, 106, 106);
+    background-color: rgb(226, 226, 226);
+
 }
 
 /* Scores */
