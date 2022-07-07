@@ -23,7 +23,7 @@ body{
     display: grid;
     margin: auto;
     width: 452px;
-    border: solid 1px red;
+    border: solid 1px rgb(179, 106, 106);
     grid-template-columns: repeat(3, 150px);
     grid-template-rows: repeat(3,150px);
 }
@@ -46,6 +46,10 @@ img{
 .grid:hover {
     background-color: rgb(226, 226, 226);
 
+}
+
+.T {
+    color: rgb(179, 106, 106);
 }
 
 /* Scores */
@@ -96,7 +100,7 @@ img{
     color: rgb(0, 0, 0);
 }
 
-.restart{
+.restart {
     display: relative;
     margin: 0 auto;
     padding: 13px;
@@ -105,7 +109,16 @@ img{
     border-radius: 10%;
     background-color:rgb(132, 132, 132);
     color: white;
-
+}
+.restart:hover {
+    display: relative;
+    margin: 0 auto;
+    padding: 13px;
+    font-size: 1em;
+    border: none;
+    border-radius: 10%;
+    background-color:rgb(88, 113, 68);
+    color: white;
 }
 
 /* Reset Score Button */
@@ -121,7 +134,7 @@ img{
     padding: 13px;
     font-size: 1em;
     border: none;
-    border-radius: 10%;
+    border-radius: 3%;
     background-color:rgb(132, 132, 132);
     color: white;
     transition: 0.5s;
@@ -132,7 +145,7 @@ img{
     padding: 13px;
     font-size: 1em;
     border: none;
-    border-radius: 10%;
+    border-radius: 3%;
     background-color:rgb(88, 113, 68);
     color: white;
 }
