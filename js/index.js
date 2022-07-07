@@ -40,7 +40,7 @@ $(document).ready(function() {
                         $('.end').fadeIn(600);
                         return(player[i]);
                     }
-                    if($('#g0').children().length !== 0 && $('#g1').children().length !== 0 && $('#g2').children().length !== 0 && $('#g3').children().length !== 0 && $('#g4').children().length !== 0 && $('#g5').children().length !== 0 && $('#g6').children().length !== 0 && $('#g7').children().length !== 0 && $('#g8').children().length !== 0) {
+                    if($('#g0').children().length !== 0 && $('#g1').children().length !== 0 && $('#g2').children().length !== 0 && $('#g3').children().length !== 0 && $('#g4').children().length !== 0 && $('#g5').children().length !== 0 && $('#g6').children().length !== 0 && $('#g7').children().length !== 0 && $('#g8').children().length !== 0 & isWin !== 'X' && isWin != 'O') {
                         $('.endMsg').text(`DRAW`)
                         $('.end').fadeIn(600);
                         return ('DRAW');
