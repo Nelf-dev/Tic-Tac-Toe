@@ -7,8 +7,8 @@ $(document).ready(function() {
     const winAudio = new Audio("sounds/win.wav");
 
     let scoresX = 0;
-    let scoresO = 1;
-
+    let scoresO = 0;
+    
     if(localStorage.getItem('KeyX')){ // Checks local storage for previous logged scores
         scoresX = parseInt(localStorage.getItem('KeyX'));
         $('.X').text(`${scoresX}`);

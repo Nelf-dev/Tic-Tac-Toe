@@ -20,7 +20,7 @@ Use mouse `left` click to select grid you would like your X or O to be placed.
 
 ##  Play it!
 
-The game has been uploaded on to github and easily accessible via [here](https://nelf-dev.github.io/project0/).
+The game has been uploaded on to github and easily accessible via [here](https://nelf-dev.github.io/Tic-Tac-Toe/).
 
 ## Libraries
 - JQuery
