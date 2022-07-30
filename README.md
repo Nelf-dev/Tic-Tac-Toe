@@ -1,6 +1,10 @@
 # T i c - T a c - T o e
 
-This is a project for SEI54 in which a Tic Tac Toe game is made from HTML, CSS, JS and JQuery library. It follows the same rules as the beloved [Tic Tac Toe](https://playtictactoe.org/).
+This is a project for SEI54 in which a Tic Tac Toe game is made from HTML, CSS, JS and JQuery library. It follows the same rules as the beloved Tic Tac Toe.
+
+## Play it!
+
+The game has been uploaded on to github and easily accessible via [here](https://nelf-dev.github.io/Tic-Tac-Toe/).
 
 ## Features
 - Local Multiplayer
@@ -17,10 +21,6 @@ This is a project for SEI54 in which a Tic Tac Toe game is made from HTML, CSS, 
 ## Controls
 
 Use mouse `left` click to select grid you would like your X or O to be placed.
-
-##  Play it!
-
-The game has been uploaded on to github and easily accessible via [here](https://nelf-dev.github.io/Tic-Tac-Toe/).
 
 ## Libraries
 - JQuery
